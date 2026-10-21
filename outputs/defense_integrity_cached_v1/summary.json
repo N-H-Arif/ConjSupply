@@ -1,0 +1,487 @@
+{
+  "model_dir": "models/llm/phi-3.5-mini-instruct",
+  "host": "evc3",
+  "provenance": {
+    "mode": "cached_v100_outputs",
+    "csv": "outputs/paired_phi/ag_news.csv",
+    "csv_sha256": "bb98b079e4b0670f0ab51e7ff0b756e1c359bacf03ed7453114697eda9d40311",
+    "original_run_log": "slurm/run.out"
+  },
+  "samples": 300,
+  "model_inventory": {
+    "config.json": {
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "bytes": 661
+    },
+    "generation_config.json": {
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "bytes": 242
+    },
+    "merges.txt": {
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "bytes": 1671839
+    },
+    "model-00001-of-00002.safetensors": {
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "bytes": 3968658944
+    },
+    "model-00002-of-00002.safetensors": {
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "bytes": 2203268048
+    },
+    "model.safetensors.index.json": {
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "bytes": 35581
+    },
+    "tokenizer.json": {
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "bytes": 7305
+    },
+    "vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    }
+  },
+  "model_preflight_seconds": 19.42161150998436,
+  "results": [
+    {
+      "case": "clean",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 0.13595666666666667,
+      "verify_p95_us": 0.173
+    },
+    {
+      "case": "clean",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.846403333333336,
+      "verify_p95_us": 5.223
+    },
+    {
+      "case": "clean",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 146.8957999999998,
+      "verify_p95_us": 156.382
+    },
+    {
+      "case": "clean",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.475493333333332,
+      "verify_p95_us": 4.763
+    },
+    {
+      "case": "clean",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 13.55365333333333,
+      "verify_p95_us": 15.838
+    },
+    {
+      "case": "wrapper_only_direct",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 1.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 0.13415000000000016,
+      "verify_p95_us": 0.173
+    },
+    {
+      "case": "wrapper_only_direct",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 5.172359999999997,
+      "verify_p95_us": 5.518
+    },
+    {
+      "case": "wrapper_only_direct",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 144.3598833333332,
+      "verify_p95_us": 158.532
+    },
+    {
+      "case": "wrapper_only_direct",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 5.302976666666668,
+      "verify_p95_us": 5.505
+    },
+    {
+      "case": "wrapper_only_direct",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 14.021076666666643,
+      "verify_p95_us": 14.087
+    },
+    {
+      "case": "metadata_only_prefix",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 0.14924333333333348,
+      "verify_p95_us": 0.172
+    },
+    {
+      "case": "metadata_only_prefix",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 5.046706666666665,
+      "verify_p95_us": 5.307
+    },
+    {
+      "case": "metadata_only_prefix",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 141.28958333333327,
+      "verify_p95_us": 161.178
+    },
+    {
+      "case": "metadata_only_prefix",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 5.113376666666665,
+      "verify_p95_us": 5.268
+    },
+    {
+      "case": "metadata_only_prefix",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 17.37862999999998,
+      "verify_p95_us": 16.35
+    },
+    {
+      "case": "conjunctive_both",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 1.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 0.12606999999999985,
+      "verify_p95_us": 0.179
+    },
+    {
+      "case": "conjunctive_both",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.77643,
+      "verify_p95_us": 4.823
+    },
+    {
+      "case": "conjunctive_both",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 154.55470333333338,
+      "verify_p95_us": 163.11
+    },
+    {
+      "case": "conjunctive_both",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 5.202450000000005,
+      "verify_p95_us": 5.27
+    },
+    {
+      "case": "conjunctive_both",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 1.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 15.867986666666654,
+      "verify_p95_us": 17.296
+    },
+    {
+      "case": "marker_only_mismatch",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 0.1282,
+      "verify_p95_us": 0.157
+    },
+    {
+      "case": "marker_only_mismatch",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.477193333333335,
+      "verify_p95_us": 5.286
+    },
+    {
+      "case": "marker_only_mismatch",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 148.41661333333337,
+      "verify_p95_us": 158.859
+    },
+    {
+      "case": "marker_only_mismatch",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.809426666666669,
+      "verify_p95_us": 5.182
+    },
+    {
+      "case": "marker_only_mismatch",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 18.09594,
+      "verify_p95_us": 17.206
+    },
+    {
+      "case": "corrupt_signature",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 0.12349666666666678,
+      "verify_p95_us": 0.157
+    },
+    {
+      "case": "corrupt_signature",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.968000000000002,
+      "verify_p95_us": 5.344
+    },
+    {
+      "case": "corrupt_signature",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 161.54696666666672,
+      "verify_p95_us": 168.892
+    },
+    {
+      "case": "corrupt_signature",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.580073333333333,
+      "verify_p95_us": 5.224
+    },
+    {
+      "case": "corrupt_signature",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 13.571599999999997,
+      "verify_p95_us": 13.962
+    },
+    {
+      "case": "attacker_resigned",
+      "defense": "none",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 1.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 0.14093333333333338,
+      "verify_p95_us": 0.166
+    },
+    {
+      "case": "attacker_resigned",
+      "defense": "wrapper_hash_pin",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.640490000000001,
+      "verify_p95_us": 4.797
+    },
+    {
+      "case": "attacker_resigned",
+      "defense": "full_bundle_ed25519",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 142.9020033333334,
+      "verify_p95_us": 160.685
+    },
+    {
+      "case": "attacker_resigned",
+      "defense": "tif_bah_exact",
+      "N": 300,
+      "acceptance_rate": 0.0,
+      "gate_rate": 0.0,
+      "payload_rate": 0.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 0.0,
+      "verify_mean_us": 4.316049999999996,
+      "verify_p95_us": 4.343
+    },
+    {
+      "case": "attacker_resigned",
+      "defense": "tif_bah_comment_normalized",
+      "N": 300,
+      "acceptance_rate": 1.0,
+      "gate_rate": 1.0,
+      "payload_rate": 1.0,
+      "task_accuracy": 0.47333333333333333,
+      "output_changed_rate": 1.0,
+      "verify_mean_us": 15.195326666666675,
+      "verify_p95_us": 15.768
+    }
+  ],
+  "poisoned_approved_reference_acceptance": {
+    "wrapper_hash_pin": true,
+    "full_bundle_ed25519": true,
+    "tif_bah_exact": true,
+    "tif_bah_comment_normalized": true
+  },
+  "notes": [
+    "Synthetic fixed artifact cases; N counts paired completions, not independent attacks.",
+    "Ed25519 signature on manifest covers wrapper, metadata and actual model artifact hashes.",
+    "Model hashes are established once at preflight; fixed weights reused across cases.",
+    "Verification timings exclude model hashing/loading and BAH I/O; not end-to-end overhead.",
+    "Blocked wrappers use an experiment-owned neutral raw-output fallback.",
+    "BAH is an audit log, not a signed attestation or malicious-publisher detector.",
+    "Comment-normalized TIF is an explicit lossy-normalization sensitivity control."
+  ]
+}

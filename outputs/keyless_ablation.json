@@ -1,0 +1,90 @@
+{
+  "executed_at_utc": "2026-10-06T15:51:58.992414+00:00",
+  "script_sha256": "8463d49fcc5824d389f76f2a12acd34040501d9e8ced5910718de75b93b64f49",
+  "results": [
+    {
+      "variant": "keyed",
+      "control": "matching",
+      "activated": true,
+      "marker_ok": true,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyed",
+      "control": "marker_removed",
+      "activated": false,
+      "marker_ok": false,
+      "lock_ok": false
+    },
+    {
+      "variant": "keyed",
+      "control": "corrupt_marker_digest",
+      "activated": false,
+      "marker_ok": false,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyed",
+      "control": "edited_wrapper_stale_lock",
+      "activated": false,
+      "marker_ok": true,
+      "lock_ok": false
+    },
+    {
+      "variant": "keyed",
+      "control": "retarget_public_digest_replay",
+      "activated": true,
+      "marker_ok": true,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyed",
+      "control": "wrong_runtime_key",
+      "activated": false,
+      "marker_ok": false,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyless",
+      "control": "matching",
+      "activated": true,
+      "marker_ok": true,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyless",
+      "control": "marker_removed",
+      "activated": false,
+      "marker_ok": false,
+      "lock_ok": false
+    },
+    {
+      "variant": "keyless",
+      "control": "corrupt_marker_digest",
+      "activated": false,
+      "marker_ok": false,
+      "lock_ok": true
+    },
+    {
+      "variant": "keyless",
+      "control": "edited_wrapper_stale_lock",
+      "activated": false,
+      "marker_ok": true,
+      "lock_ok": false
+    },
+    {
+      "variant": "keyless",
+      "control": "retarget_public_digest_replay",
+      "activated": true,
+      "marker_ok": true,
+      "lock_ok": true
+    }
+  ],
+  "interpretation": [
+    "Matching keyed and keyless configurations both activate.",
+    "The keyless construction uses no runtime secret; the keyed construction still requires its key.",
+    "Absent markers, mismatched digests, and stale wrapper locks fail closed.",
+    "A fixed public marker digest can be replayed with a recomputed unkeyed wrapper lock.",
+    "These are deterministic construction checks, not model or adoption experiments."
+  ]
+}

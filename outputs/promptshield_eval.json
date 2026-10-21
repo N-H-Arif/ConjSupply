@@ -1,0 +1,29 @@
+{
+  "checkpoint": "models/promptshield-deberta-v3",
+  "threshold": 0.5,
+  "inspected_content": "final model output text (post-generation)",
+  "enforcement_location": "output filter, after generation, before return",
+  "native_task": "prompt-injection detection on inputs",
+  "labels": {
+    "0": "SAFE",
+    "1": "INJECTION"
+  },
+  "clean": {
+    "n": 300,
+    "flagged": 10,
+    "rate": 0.03333333333333333,
+    "mean_p_injection": 0.059339945075615026
+  },
+  "banner_payload": {
+    "n": 300,
+    "flagged": 30,
+    "rate": 0.1,
+    "mean_p_injection": 0.11374731632630831
+  },
+  "depswap_payload": {
+    "n": 300,
+    "flagged": 0,
+    "rate": 0.0,
+    "mean_p_injection": 0.0002349762361457882
+  }
+}

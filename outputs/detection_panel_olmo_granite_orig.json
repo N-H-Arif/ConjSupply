@@ -1,0 +1,93 @@
+{
+  "n": 60,
+  "models": [
+    "models/llm/olmo2-7b-instruct",
+    "models/llm/granite-3.1-8b-instruct"
+  ],
+  "bandit": {
+    "a": 0.0,
+    "b": 0.0,
+    "c": 0.0,
+    "e": 0.0,
+    "d": 0.0,
+    "benign": 0.0
+  },
+  "auditors": {
+    "olmo2-7b-instruct": {
+      "a": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "b": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 49,
+        "n": 60
+      },
+      "c": {
+        "wrap": 14,
+        "meta": 0,
+        "joint": 60,
+        "n": 60
+      },
+      "e": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "d": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "benign": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      }
+    },
+    "granite-3.1-8b-instruct": {
+      "a": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "b": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "c": {
+        "wrap": 60,
+        "meta": 0,
+        "joint": 60,
+        "n": 60
+      },
+      "e": {
+        "wrap": 10,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "d": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      },
+      "benign": {
+        "wrap": 0,
+        "meta": 0,
+        "joint": 0,
+        "n": 60
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "N": 300,
+  "rows": [
+    {
+      "method": "wrapper_hash_pin",
+      "rechecks_at_runtime": false,
+      "payload_rate": 1.0
+    },
+    {
+      "method": "full_bundle_sign",
+      "rechecks_at_runtime": false,
+      "payload_rate": 1.0
+    },
+    {
+      "method": "tif_runtime",
+      "rechecks_at_runtime": true,
+      "payload_rate": 0.0
+    }
+  ]
+}
